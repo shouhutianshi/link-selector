@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>链接选择器</title>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+  <div class="btn mt-40 trigger-btn">点我</div>
+  <p style="text-align: center;">直接引用注释--模态框--的结构。当然不要忘了js</p>
+
+  <!-- 模态框 -->
+  <div class="fix-center modal-box" style="display: none;">
+    <div class="abs-center modal">
+      <div class="modal-title">
+        <i class="modal-close"></i>
+      </div>
+      <ul class="tabs">
+        <li class="active-tab">业态</li>
+        <li>品牌页面</li>
+        <li>活动页面</li>
+        <li>文章页面</li>
+        <li>自定义页面</li>
+      </ul>
+      <div class="modal-search">
+        <span>标题</span>
+        <input type="text" placeholder="请输入关键词">
+        <a class="modal-search--btn">查询</a>
+        <span class="is-blue modal-refresh">刷新</span>
+      </div>
+      <!-- 表格 -->
+      <table class="modal-table">
+        <thead>
+          <th>标题</th>
+          <th>操作</th>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div id="modal-pagnation" class="modal-pagnation fs-12"></div>
+    </div>
+  </div>
+  <!-- 模态框结束 -->
+  <script src="./js/jquery.js"></script>
+  <script src="./js/pagination.min.js"></script>
+  <script src="./js/new-modal.js"></script>
+  <script>
+    // 默认请求地址和默认查询参数
+    var url = 'http://rapapi.org/mockjsdata/26180/lists'
+    var defaultParams = {
+      category: '业态',
+      pageNum: 150 // total / 5
+    }
+    // 回显分页器
+    $('.modal-table').find('tbody').on('click', 'td:nth-last-of-type(1)', function () {
+      var result = $(this).siblings().text()
+      $modalBox.hide()
+      console.log(result)
+    })
+  </script>
+</body>
+</html>

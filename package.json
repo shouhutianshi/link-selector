@@ -1,0 +1,35 @@
+{
+  "name": "sg",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp serve",
+    "dev": "gulp serve"
+  },
+  "keywords": [],
+  "author": "xiaoyang <xy1328317909@gmail.com> (http://github.com/shouhutianshi)",
+  "dependencies": {
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.3.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-csso": "^3.0.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rev": "^8.1.1",
+    "gulp-rev-replace": "^0.4.4",
+    "gulp-sass": "^4.0.1",
+    "gulp-useref": "^3.1.5",
+    "node-sass": "^4.8.3",
+    "postcss-import": "^11.1.0",
+    "postcss-loader": "^2.1.4",
+    "postcss-px-to-viewport": "^0.0.3",
+    "postcss-url": "^7.3.2"
+  }
+}
